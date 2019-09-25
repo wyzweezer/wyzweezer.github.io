@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="技术随笔  Redis PHP,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="小博客，记录一点点人生">
-<meta name="keywords" content="博客 感悟 技术">
-<meta property="og:type" content="website">
-<meta property="og:title" content="向来心是看客心">
-<meta property="og:url" content="http://weezer.cn/index.html">
+<meta name="description" content="setNx 进阶 高并发情况下，多个人预约同一节课程，有5个座位，两个人刚好都想选3号座位。  123456$key = &amp;apos;class_id:1:seat_number:3&amp;apos;;if ($cache-&amp;gt;setNx($key, 1))&amp;#123;    $cache-&amp;gt;expire($key, 20);&amp;#125; //删除$cache-&amp;gt;del($key);">
+<meta name="keywords" content="技术随笔  Redis PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="setNx简述">
+<meta property="og:url" content="http://weezer.cn/2019/09/25/setnx/index.html">
 <meta property="og:site_name" content="向来心是看客心">
-<meta property="og:description" content="小博客，记录一点点人生">
+<meta property="og:description" content="setNx 进阶 高并发情况下，多个人预约同一节课程，有5个座位，两个人刚好都想选3号座位。  123456$key = &amp;apos;class_id:1:seat_number:3&amp;apos;;if ($cache-&amp;gt;setNx($key, 1))&amp;#123;    $cache-&amp;gt;expire($key, 20);&amp;#125; //删除$cache-&amp;gt;del($key);">
 <meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-09-25T10:11:37.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="向来心是看客心">
-<meta name="twitter:description" content="小博客，记录一点点人生">
+<meta name="twitter:title" content="setNx简述">
+<meta name="twitter:description" content="setNx 进阶 高并发情况下，多个人预约同一节课程，有5个座位，两个人刚好都想选3号座位。  123456$key = &amp;apos;class_id:1:seat_number:3&amp;apos;;if ($cache-&amp;gt;setNx($key, 1))&amp;#123;    $cache-&amp;gt;expire($key, 20);&amp;#125; //删除$cache-&amp;gt;del($key);">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://weezer.cn/">
+  <link rel="canonical" href="http://weezer.cn/2019/09/25/setnx/">
 
 
 
 
 
-  <title>向来心是看客心</title>
+  <title>setNx简述 | 向来心是看客心</title>
   
 
 
@@ -144,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -250,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/25/setnx/" itemprop="url">setNx简述</a></h1>
+          <h1 class="post-title" itemprop="name headline">setNx简述</h1>
         
 
         <div class="post-meta">
@@ -302,9 +300,7 @@
       
 
       
-        
-          
-            <h2 id="setNx-进阶"><a href="#setNx-进阶" class="headerlink" title="setNx 进阶"></a>setNx 进阶</h2><ol>
+        <h2 id="setNx-进阶"><a href="#setNx-进阶" class="headerlink" title="setNx 进阶"></a>setNx 进阶</h2><ol>
 <li><p>高并发情况下，多个人预约同一节课程，有5个座位，两个人刚好都想选3号座位。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$key = &apos;class_id:1:seat_number:3&apos;;</span><br><span class="line">if ($cache-&gt;setNx($key, 1))&#123;</span><br><span class="line">    $cache-&gt;expire($key, 20);</span><br><span class="line">&#125;</span><br><span class="line"> //删除</span><br><span class="line">$cache-&gt;del($key);</span><br></pre></td></tr></table></figure>
 
@@ -332,8 +328,6 @@
 </li>
 </ol>
 
-          
-        
       
     </div>
     
@@ -348,146 +342,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://weezer.cn/2019/09/24/My First Post/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Weezer">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="向来心是看客心">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/24/My First Post/" itemprop="url">第一篇文章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-24T20:09:31+08:00">
-                2019-09-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/技术随笔-Redis-PHP/" rel="tag"># 技术随笔  Redis PHP</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="新的开始"><a href="#新的开始" class="headerlink" title="新的开始"></a>新的开始</h2><pre><code>我的爱情迎来了转机，那么我的人生也迎来了转机。
-
-我一生之至乐在执笔为文时，心中错综复杂之情思，我笔皆可畅达之。我自谓人生之乐，未有过于此者也。 ---苏轼
-
-记录过很多笔记，各个地方都有，现在我想把它统一写到一个地方，就是这里。
-
-也许别人能看到，那么就会督促我认真对待，希望能坚持下来吧。
-
-写什么呢，看心情。
-
-爱情随笔、技术文章、人生感悟、喜欢的笑话
-
-多想想，别人想看什么。
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/24/My First Post/" rel="next" title="第一篇文章">
+                <i class="fa fa-chevron-left"></i> 第一篇文章
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -497,10 +381,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -508,6 +393,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -528,8 +417,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -580,6 +478,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#setNx-进阶"><span class="nav-number">1.</span> <span class="nav-text">setNx 进阶</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -713,6 +627,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
